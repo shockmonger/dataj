@@ -1,8 +1,5 @@
-import numpy, scipy
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-import seaborn as sns
+import scipy, numpy as np, pandas as pd, matplotlib.pyplot as plt
+import matplotlib.animation as animation, seaborn as sns
 
 #read data
 df1 = pd.DataFrame.from_csv('./data1.csv')
@@ -15,6 +12,8 @@ df3 = df3.reset_index(drop=True)
 # cols2 = df2.keys()
 # cols3 = df3.keys()
 cols = ['p1','p2','p3','p4','p5','p6','p7']
+
+
 #separate all columns containing EMG and allocate to EMG COlumn
 X_1 = df1.columns[df1.columns.str.contains('ACC X')]
 Y_1 = df1.columns[df1.columns.str.contains('ACC Y')]
